@@ -1,0 +1,15 @@
+.input {
+    min-width: 300px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    cursor: pointer;
+    width: 35%;
+    align-self: center;
+    margin-top: 10px;
+}
