@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getChange, getCurrentRates } from './currencies-operations';
 
 const initialState = {
-    data: [],
+    data: {},
     rates: {},
     loading: false,
     error: null,

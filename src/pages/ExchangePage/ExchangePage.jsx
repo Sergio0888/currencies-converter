@@ -12,9 +12,7 @@ const ExchangePage = () => {
 
   const results = useSelector(fetchData);
   const dispatch = useDispatch();
-
   const isCalculation = ({ amount, from, to }) => {
-    console.log(amount)
     dispatch(getChange({
       amount,
       from,

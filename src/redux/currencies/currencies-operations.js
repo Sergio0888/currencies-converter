@@ -7,7 +7,6 @@ export const getChange = createAsyncThunk(
     async (data, { rejectWithValue }) => {
         try {
            const response = await getConvert(data);
-           console.log(response)
            if(!response.success) {
             Notiflix.Report.failure('You entered incorrect data', 'Please enter "15 usd in uah", "200 eur in usd"', 'Ok');
            }

@@ -3,7 +3,7 @@ import axios from "axios";
 const instance = axios.create({
     baseURL: "https://api.apilayer.com/currency_data",
     headers: {
-        apikey: "8CFotvf0h722fcJH2rsWAP9L6mElhK6V"
+        apikey: "CglOqQVWwJyaeK1T1Ge8kkQemwmufX31"
     }
 })
 

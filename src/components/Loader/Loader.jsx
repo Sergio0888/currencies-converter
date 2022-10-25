@@ -7,7 +7,7 @@ export const Loader = () => (
     sx={{
       position: "absolute",
       left: "47%",
-      top: "40%",
+      top: "57%",
     }}
   />
 );

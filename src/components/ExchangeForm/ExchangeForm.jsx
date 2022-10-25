@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
@@ -64,3 +65,7 @@ const ExchangeForm = ({isCalculation}) => {
 };
 
 export default ExchangeForm;
+
+ExchangeForm.propTypes = {
+  isCalculation: PropTypes.func.isRequired
+}

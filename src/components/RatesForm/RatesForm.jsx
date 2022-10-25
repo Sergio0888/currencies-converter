@@ -7,11 +7,12 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import PropTypes from 'prop-types';
 
 
 const RatesForm = ({data}) => {
-
-const arrayOfRates = Object.entries(data.quotes);
+    
+    const arrayOfRates = Object.entries(data.quotes);
 
     return (
         <TableContainer component={Paper}>
@@ -41,3 +42,12 @@ const arrayOfRates = Object.entries(data.quotes);
 };
 
 export default RatesForm;
+
+RatesForm.propTypes = {
+    data: PropTypes.shape({
+        quotes: PropTypes.objectOf(PropTypes.number).isRequired,
+        source: PropTypes.string.isRequired,
+        success: PropTypes.bool.isRequired,
+        timestamp: PropTypes.number.isRequired
+    })
+};

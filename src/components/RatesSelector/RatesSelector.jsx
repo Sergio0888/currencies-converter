@@ -4,6 +4,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import PropTypes from 'prop-types';
 
 import styles from "./RatesSelector.module.scss";
 
@@ -39,3 +40,7 @@ const RatesSelector = ({ onChange }) => {
 };
 
 export default RatesSelector;
+
+RatesSelector.propTypes = {
+  onChange: PropTypes.func.isRequired
+}
