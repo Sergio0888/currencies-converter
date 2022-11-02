@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
-
-import styles from "./ExchangeForm.module.scss";
+import { Box } from "@mui/material";
 
 const initialState = {
   amount: null,
@@ -48,19 +47,34 @@ const ExchangeForm = ({isCalculation}) => {
   };
 
     return (
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <Box 
+      sx={{
+        display: 'flex',
+        flexDirection: 'column'
+      }}
+      component="form"
+      onSubmit={handleSubmit}
+      >
         <TextField
-          className={styles.input}
+          sx={{
+            minWidth: 250,
+            marginBottom: 1
+          }}
           label='Please enter "15 usd in uah"'
           variant="outlined"
           value={inputValue}
           onChange={handleChange}
   
         />
-        <Button type='submit' 
-        className={styles.btn} 
-        variant="contained">Click</Button>
-    </form>
+        <Button 
+        type='submit' 
+        sx={{
+          alignSelf: 'center',
+          width: 100
+        }}
+        variant="contained">
+        Click</Button>
+      </Box>
     )
 };
 

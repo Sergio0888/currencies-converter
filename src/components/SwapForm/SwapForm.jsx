@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import PropTypes from 'prop-types';
 import Typography from "@mui/material/Typography";
-import styles from "./SwapForm.module.scss";
 import { isLoading } from "redux/currencies/currencies-selector";
 import { Loader } from "components/Loader/Loader";
 
@@ -13,8 +12,12 @@ const SwapForm = ({data}) => {
     return (
         <>
         {loading && <Loader />}
-            {result > 0 && <Typography
-            className={styles.text}
+            {result > 0 && 
+            <Typography
+            sx={{
+                fontSize: 25,
+                marginTop: 3
+            }}
             variant="h6"
             gutterBottom
             component="p"
